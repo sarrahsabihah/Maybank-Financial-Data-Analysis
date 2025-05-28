@@ -9,7 +9,7 @@ maybank-dividend-analysis/
 ├── data/
 │   └── maybank_financials_cleaned.csv
 ├── notebooks/
-│   └── dividend_analysis.ipynb
+│   └── Maybank_dividend_Analysis.ipynb
 ├── charts/
 │   ├── eps_trend_over_time.json
 │   ├── dps_trend_over_time.json
