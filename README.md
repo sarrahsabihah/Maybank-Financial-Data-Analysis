@@ -66,7 +66,7 @@ You can visualize them using [Vega Editor](https://vega.github.io/editor/).
 - Explains technical insights in a business-friendly way
 
 ## 📬 Contact
-If you found this useful or want to collaborate, feel free to reach out via GitHub or [LinkedIn](https://linkedin.com).
+If you found this useful or want to collaborate, feel free to reach out via GitHub or [LinkedIn](https://www.linkedin.com/in/sarrahsabihah?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBLNYF3SaTRi2Q4W23Mdb2w%3D%3D).
 
 ---
 
