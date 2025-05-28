@@ -1,6 +1,73 @@
-Maybank Financial Data AnalysisProject OverviewThis project aims to analyze key financial trends of Maybank, specifically focusing on its Dividend Per Share (DPS), Earnings Per Share (EPS), and Payout Ratio. By examining these metrics over time, the analysis seeks to provide insights into Maybank's dividend growth, the consistency between its earnings and dividend distributions, and the evolution of its dividend policy.Analysis AimsDividend Growth or Decline: Assess the historical trend of Maybank's Dividend Per Share to identify periods of growth, decline, or stagnation.Earnings vs. Dividends Consistency: Evaluate how closely Maybank's dividend payouts align with its earnings performance.Maybank's Dividend Policy Over Time: Understand Maybank's approach to distributing profits to shareholders by analyzing the Payout Ratio trend.DatasetThe analysis is based on financial data provided in the dataset_mb.csv file. This dataset contains quarterly financial metrics, including EPS, DPS, and other relevant financial indicators.FeaturesData Loading & Cleaning: Reads the CSV dataset and performs essential cleaning, such as stripping whitespace from column names and converting the 'Year' column to datetime objects for proper time-series analysis.Payout Ratio Calculation: Dynamically calculates the Payout Ratio ((DPS / EPS) * 100) for each entry.Annual Data Aggregation: Groups the data by year and calculates the mean of EPS, DPS, and Payout Ratio to provide annual trends.Interactive Visualizations: Generates three interactive line charts using Altair to visualize:EPS Trend Over TimeDPS Trend Over TimePayout Ratio Trend Over TimeExportable Charts: Saves the generated charts as .json files, which can be easily shared and viewed in any Vega-Lite compatible viewer or directly in a web browser.RequirementsTo run this project, you will need Python installed, along with the following libraries:pandasaltairYou can install these dependencies using pip and the provided requirements.txt file:pip install -r requirements.txt
-UsageClone the Repository:git clone https://github.com/your-username/maybank-financial-analysis.git
-cd maybank-financial-analysis
-(Replace your-username/maybank-financial-analysis.git with your actual repository URL)Place the Dataset:Ensure the dataset_mb.csv file is placed in the root directory of the cloned repository.Install Dependencies:If you haven't already, install the required Python libraries:pip install -r requirements.txt
-Run the Analysis Script:Execute the Python script:python financial_analysis.py
-(Assuming your main analysis script is named financial_analysis.py. If you named it something else, adjust the command accordingly.)View the Results:After running the script, three .json files will be generated in the same directory:eps_trend_over_time.jsondps_trend_over_time.jsonpayout_ratio_trend_over_time.jsonYou can open these .json files in a web browser or use an online Vega-Lite editor (e.g., Vega Editor) to interact with the charts.Interpretation GuideOnce you have the visualizations, here's how to interpret them to address your project aims:Dividend Growth or Decline (DPS Trend Chart):Observe the general direction of the line. An upward slope indicates growth, while a downward slope suggests decline.Note the steepness of the slope to understand the rate of change.Identify any significant peaks, troughs, or periods of stagnation.Earnings vs. Dividends Consistency (Comparing EPS and DPS Trend Charts):Visually compare the movement of the EPS and DPS lines.If they move in tandem (both rising or falling together), it indicates a strong relationship and consistency.If DPS remains stable while EPS fluctuates, it suggests a policy aimed at consistent payouts regardless of short-term earnings volatility.If DPS grows significantly faster than EPS, it might signal an aggressive or potentially unsustainable dividend policy.Maybank's Dividend Policy Over Time (Payout Ratio Trend Chart):Stable Ratio: Suggests a consistent policy of distributing a fixed percentage of earnings.Increasing Ratio: May indicate a more generous dividend policy, potentially due to strong cash flow, fewer reinvestment opportunities, or a strategic decision to return more capital to shareholders. Be mindful of ratios exceeding 100%, as this implies paying out more than earned, which is unsustainable.Decreasing Ratio: Could mean the company is retaining more earnings for reinvestment (e.g., expansion, debt reduction) or adopting a more conservative payout approach.ContributingContributions are welcome! If you have suggestions for improvements, new features, or bug fixes, please feel free to:Fork the repository.Create a new branch (git checkout -b feature/your-feature-name).Make your changes.Commit your changes (git commit -m 'Add new feature').Push to the branch (git push origin feature/your-feature-name).Open a Pull Request.LicenseThis project is licensed under the MIT License - see the LICENSE file for details.
+# 📘 Maybank Dividend Trend Analysis
+
+## 🎯 Objective
+To analyze the historical dividend performance of **Malayan Banking Berhad (Maybank)** by evaluating its Earnings Per Share (EPS), Dividend Per Share (DPS), and Dividend Payout Ratio over time. This project provides insight into Maybank’s dividend policy stability, shareholder returns, and overall earnings quality.
+
+## 📂 Project Structure
+```
+maybank-dividend-analysis/
+├── data/
+│   └── maybank_financials_cleaned.csv
+├── notebooks/
+│   └── dividend_analysis.ipynb
+├── charts/
+│   ├── eps_trend_over_time.json
+│   ├── dps_trend_over_time.json
+│   └── payout_ratio_trend_over_time.json
+├── requirements.txt
+└── README.md
+```
+
+## 🧠 Key Features
+- Loads publicly scraped Maybank financial data
+- Cleans and processes EPS & DPS data
+- Calculates dividend payout ratios
+- Visualizes time-based trends with interactive charts
+- Saves output charts in Altair/Vega JSON format
+
+## 📊 Sample Insights
+- **DPS peaked in 2023**, aligned with strong earnings growth
+- **Dividend payout ratio** has stayed within a stable 60%–85% range
+- Notable dip in 2020 likely due to COVID-19-related profit impact
+
+## 🛠 Tools & Libraries Used
+- **Python**: `pandas`, `altair`
+- **Octoparse**: No-code scraping from KLSE Screener
+- **VSCode & Jupyter Notebooks** for analysis
+- **Altair** for lightweight, interactive visualizations
+
+## 🚀 How to Run This Project
+1. Clone this repo:
+```bash
+git clone https://github.com/your-username/maybank-dividend-analysis.git
+cd maybank-dividend-analysis
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the notebook:
+```bash
+jupyter lab notebooks/dividend_analysis.ipynb
+```
+
+## 📁 Outputs
+- `eps_trend_over_time.json`
+- `dps_trend_over_time.json`
+- `payout_ratio_trend_over_time.json`
+
+You can visualize them using [Vega Editor](https://vega.github.io/editor/).
+
+## 💼 Use This In Interviews
+- Shows you can clean, analyze, and visualize financial data
+- Demonstrates real-world understanding of dividend mechanics
+- Explains technical insights in a business-friendly way
+
+## 📬 Contact
+If you found this useful or want to collaborate, feel free to reach out via GitHub or [LinkedIn](https://linkedin.com).
+
+---
+
+📌 Built by a data-driven analyst passionate about combining finance & tech.
